@@ -1,0 +1,31 @@
+<head>
+  <link rel="stylesheet" href="prevorders.css">
+</head>
+
+<body>
+  <nav>
+    <ul class="topnav" id ="dropdownClick">
+        <li><a href="#">Gas Agency</a></li>
+        <li class="topnav-right"><a href="/">Logout</a></li>
+        
+    </ul>
+</nav>
+  <div>
+    <table>
+      <tr>
+        <th>Order Id</th>
+        <th>Quantity</th>
+        <th>Expected Date</th>
+        <th>status</th>
+      </tr>
+      <% orders.forEach(function(order){ %>
+      <tr>
+        <td><%= order.orderId %></td>
+        <td><%= order.quantity %></td>
+        <td><%= order.deliveryDate %></td>
+        <td><%= order.status %></td>
+      </tr>
+      <% }) %>
+  </table>
+  </div>
+</body>

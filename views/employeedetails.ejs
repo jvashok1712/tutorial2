@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="employeedetails.css">
+    
+</head>
+
+<body>
+
+    <div style="text-align:center; background-color: #003366;padding:10px 0px;color:white">
+        <h1>Employee Details</h1>
+    </div>
+   
+    <div class="mycontainer">
+        
+        <hr/>
+
+        <div class="row col-md-12 justify-content-center">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="item-container">
+                    <% emp.forEach(function(employ){ %>
+                    <div class="item-image col-md-3">
+                        <img src="images/user.jpg" class="img-thumbnail item-image"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOj4E2GdAN_d3ArtA4N84cmta91XiOvLMaFEaOXRJ8bA&s"
+                            style="width:200px" alt="Can not display">
+                    
+                            <div class="item-content col-md-6 mycontent">
+                                <div>
+                                     <div>
+         
+                                         <h3>
+                                             <%=employ.name%>
+                                         </h3>
+         
+                                     </div>
+
+         
+                                     <div> <b>Id: </b>
+                                         <%=employ.employeId%>
+                                     </div>
+                                     <div> <b>Name: </b>
+                                         <%= employ.name%>
+                                     </div>
+                                     <div> <b>Phone: </b>
+                                         <%= employ.phn%>
+                                     </div>
+                                     <div><b>Email: </b>
+                                         <%= employ.email%>
+                                     </div>
+                                     <div><b>DeliveryArea: </b>
+                                         <%= employ.deliveryArea%>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+                    
+
+                    <div>
+                        <hr />
+                    </div>
+              
+            </div>
+            <%})%>
+
+        </div>
+    </div>
+     
+</body>
+
+</html>
